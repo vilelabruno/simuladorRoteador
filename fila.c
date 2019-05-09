@@ -24,12 +24,14 @@ pacote * aloca_pct(){
 int insere(pacote * inicio, pacote * fim, double tamanho){
     if (inicio == NULL){
         inicio = aloca_pct();
+        if (inicio == NULL) return 0;
         fim = inicio;
         inicio->tamanho = tamanho;
         inicio->prox = NULL;
         return 1;
     }else{
         pacote * tmp  = aloca_pct();
+        if (tmp == NULL) return 0;
         tmp->tamanho = tamanho;
         tmp->prox = NULL;
         fim->prox = tmp;
