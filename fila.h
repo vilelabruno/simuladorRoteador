@@ -6,7 +6,7 @@
 
 /* 
  * File:   fila.h
- * Author: 2016.1.08.042
+ * Author: bruno
  *
  * Created on 9 de Maio de 2019, 16:35
  */
@@ -26,9 +26,14 @@ extern "C" {
 #endif
 
 typedef struct pacote_{
-    double tamanho;
-    struct pacote_ * prox;
+	double tamanho;
+	struct pacote_ * prox;
 }pacote;
+
+int inserir(pacote ** inicio, pacote ** fim, double tamanho);
+double remover(pacote ** inicio);
+pacote * aloca_pct();
+
 
 #endif /* FILA_H */
 
